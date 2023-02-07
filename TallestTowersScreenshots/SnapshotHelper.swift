@@ -32,7 +32,8 @@ func snapshot(_ name: String, waitForLoadingIndicator: Bool) {
 
 /// - Parameters:
 ///   - name: The name of the snapshot
-///   - timeout: Amount of seconds to wait until the network loading indicator disappears. Pass `0` if you don't want to wait.
+///   - timeout: Amount of seconds to wait until the network loading indicator disappears.
+///     Pass `0` if you don't want to wait.
 func snapshot(_ name: String, timeWaitingForIdle timeout: TimeInterval = 20) {
     Snapshot.snapshot(name, timeWaitingForIdle: timeout)
 }
@@ -197,7 +198,7 @@ open class Snapshot: NSObject {
             let format = UIGraphicsImageRendererFormat()
             format.scale = image.scale
             let renderer = UIGraphicsImageRenderer(size: image.size, format: format)
-            return renderer.image { context in
+            return renderer.image { _ in
                 image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
             }
         } else {

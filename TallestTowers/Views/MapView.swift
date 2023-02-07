@@ -10,7 +10,7 @@ struct MapView: UIViewRepresentable {
     mapView.mapType = .satellite
     return mapView
   }
-  
+
   func updateUIView(_ mapView: MKMapView, context: Context) {
     let span = MKCoordinateSpan(latitudeDelta: latLonDelta, longitudeDelta: latLonDelta)
     let region = MKCoordinateRegion(center: coordinate, span: span)

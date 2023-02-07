@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TowerRow: View {
   var tower: Tower
-  
+
   var body: some View {
     HStack {
       VStack(alignment: .leading) {

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TowerDetailView: View {
   var tower: Tower
-  
+
   var body: some View {
     ZStack(alignment: .bottom) {
       MapView(coordinate: tower.location, latLonDelta: 0.025)
